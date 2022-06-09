@@ -17,3 +17,5 @@ def fun2():
     data["Prediction"] = output[0]
     return render_template("output.html",output=data)
 
+if __name__=="__main__":
+    app.run(host="0.0.0.0")
