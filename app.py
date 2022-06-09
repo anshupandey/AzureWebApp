@@ -12,7 +12,7 @@ def fun1():
 def fun2():
     data = dict(request.form)
     data2 = [data["SL"],data["SW"],data["PL"],data["PW"]]
-    data2 = [int(i) for i in data2]
+    data2 = [float(i) for i in data2]
     output = model.predict([data2])
     data["Prediction"] = output[0]
     return render_template("output.html",output=data)
